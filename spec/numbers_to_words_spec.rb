@@ -13,4 +13,12 @@ describe('Fixnum#numbers_to_words') do
   it("Will translate a teen two digit number to a word") do
     expect(14.numbers_to_words()).to(eq("fourteen"))
   end
+
+  it("Will translate a three digit number to a word") do
+    expect(145.numbers_to_words()).to(eq("one hundred forty five"))
+  end
+
+  it("Will translate a four digit number to a word") do
+    expect(2145.numbers_to_words()).to(eq("two thousand one hundred forty five"))
+  end
 end
